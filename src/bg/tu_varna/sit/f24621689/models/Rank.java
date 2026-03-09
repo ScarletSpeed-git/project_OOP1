@@ -1,4 +1,4 @@
-package bg.tu_varna.sit.f24621689;
+package bg.tu_varna.sit.f24621689.models;
 
 public enum Rank {
 YOUNGLING, INITIATE, PADAWAN , KNIGHT_ASPIRANT, KNIGHT, MASTER, BATTLE_MASTER, GRAND_MASTER

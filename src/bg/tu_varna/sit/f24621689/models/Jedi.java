@@ -1,4 +1,4 @@
-package bg.tu_varna.sit.f24621689;
+package bg.tu_varna.sit.f24621689.models;
 
 public class Jedi {
     private String name;
