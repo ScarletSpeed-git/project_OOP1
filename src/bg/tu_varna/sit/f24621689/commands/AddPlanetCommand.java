@@ -12,7 +12,7 @@ private Universe universe;
         this.universe = universe;
     }
 
-    public void execute(String[] args) {
+    public String execute(String[] args) {
         if (args.length < 2) {
             throw new PlanetException("Missing planet name. Usage: add_planet <planet_name>");
         }
@@ -24,7 +24,7 @@ private Universe universe;
         }
 
         universe.getPlanets().add(new Planet(planetName));
-        System.out.println("Successfully added planet " + planetName);
+        return "Successfully added planet " + planetName;
 
     }
 
