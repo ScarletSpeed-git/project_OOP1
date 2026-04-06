@@ -1,7 +1,7 @@
 package bg.tu_varna.sit.f24621689.commands;
 
 import bg.tu_varna.sit.f24621689.data.Universe;
-import bg.tu_varna.sit.f24621689.exceptions.DemoteJediException;
+import bg.tu_varna.sit.f24621689.exceptions.JediException;
 import bg.tu_varna.sit.f24621689.models.Jedi;
 import bg.tu_varna.sit.f24621689.models.Planet;
 import bg.tu_varna.sit.f24621689.models.Rank;
@@ -16,7 +16,7 @@ public class DemoteJediCommand implements Command {
     @Override
     public String execute(String[] args) {
         if (args.length < 3) {
-            throw new DemoteJediException("Error: Missing arguments. Usage: demote_jedi <jedi_name> <multiplier>");
+            throw new IllegalArgumentException("Error: Missing arguments. Usage: demote_jedi <jedi_name> <multiplier>");
         }
 
         String jediName = args[1];
@@ -25,11 +25,11 @@ public class DemoteJediCommand implements Command {
         try {
             multiplier = Double.parseDouble(args[2]);
         } catch (NumberFormatException e) {
-            throw new DemoteJediException("Error: Multiplier must be a number.");
+            throw new JediException("Error: Multiplier must be a number.");
         }
 
         if (multiplier <= 0) {
-            throw new DemoteJediException("Error: Multiplier must be a positive number.");
+            throw new JediException("Error: Multiplier must be a positive number.");
         }
 
         Jedi targetJedi = null;
@@ -44,11 +44,11 @@ public class DemoteJediCommand implements Command {
         }
 
         if (targetJedi == null) {
-            throw new DemoteJediException("Error: Jedi " + jediName + " not found.");
+            throw new JediException("Error: Jedi " + jediName + " not found.");
         }
 
         if (targetJedi.getRank() == Rank.YOUNGLING) {
-            throw new DemoteJediException("Error: " + jediName + " is already a YOUNGLING and cannot be demoted.");
+            throw new JediException("Error: " + jediName + " is already a YOUNGLING and cannot be demoted.");
         }
 
         Rank[] allRanks = Rank.values();

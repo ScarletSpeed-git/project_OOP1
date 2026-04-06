@@ -1,8 +1,8 @@
 package bg.tu_varna.sit.f24621689.commands;
 
 import bg.tu_varna.sit.f24621689.data.Universe;
+import bg.tu_varna.sit.f24621689.exceptions.JediException;
 import bg.tu_varna.sit.f24621689.exceptions.PlanetException;
-import bg.tu_varna.sit.f24621689.exceptions.RemoveJebiException;
 import bg.tu_varna.sit.f24621689.models.Jedi;
 import bg.tu_varna.sit.f24621689.models.Planet;
 import java.util.List;
@@ -17,7 +17,7 @@ public class RemoveJediCommand implements Command {
     @Override
     public String execute(String[] args) {
         if (args.length < 3) {
-            throw new RemoveJebiException("Error: Missing arguments. Usage: remove_jedi <planet_name> <jedi_name>");
+            throw new IllegalArgumentException("Error: Missing arguments. Usage: remove_jedi <planet_name> <jedi_name>");
         }
 
         String planetName = args[1];
@@ -36,6 +36,6 @@ public class RemoveJediCommand implements Command {
             }
         }
 
-        throw new RemoveJebiException("Error: Jedi " + jediName + " does not inhabit " + planetName);
+        throw new JediException("Error: Jedi " + jediName + " does not inhabit " + planetName);
     }
 }

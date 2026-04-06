@@ -14,7 +14,7 @@ private Universe universe;
 
     public String execute(String[] args) {
         if (args.length < 2) {
-            throw new PlanetException("Missing planet name. Usage: add_planet <planet_name>");
+            throw new IllegalArgumentException("Missing planet name. Usage: add_planet <planet_name>");
         }
 
         String planetName = args[1];
