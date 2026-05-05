@@ -15,6 +15,9 @@ public class Jedi {
         this.strength = strength;
     }
 
+    public Jedi() {
+    }
+
     public String getName() {
         return name;
     }
@@ -33,6 +36,18 @@ public class Jedi {
 
     public Rank getRank() {
         return rank;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setSaberColor(String saberColor) {
+        this.saberColor = saberColor;
     }
 
     public void setRank(Rank rank) {

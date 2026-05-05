@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="25" class="java.beans.XMLDecoder">
+ <object class="java.util.ArrayList">
+  <void method="add">
+   <object class="bg.tu_varna.sit.f24621689.models.Planet" id="Planet0">
+    <void property="name">
+     <string>Tatooine</string>
+    </void>
+    <void property="population">
+     <void method="add">
+      <object class="bg.tu_varna.sit.f24621689.models.Jedi">
+       <void property="age">
+        <int>800</int>
+       </void>
+       <void property="name">
+        <string>Yoda</string>
+       </void>
+       <void property="rank">
+        <object class="java.lang.Enum" method="valueOf">
+         <class>bg.tu_varna.sit.f24621689.models.Rank</class>
+         <string>MASTER</string>
+        </object>
+       </void>
+       <void property="saberColor">
+        <string>green</string>
+       </void>
+       <void property="strength">
+        <double>1000.0</double>
+       </void>
+      </object>
+     </void>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>

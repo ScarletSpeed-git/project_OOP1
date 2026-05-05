@@ -15,7 +15,6 @@ public class CommandInvoker {
         this.universe = universe;
         this.commandRegistry = new HashMap<>();
 
-        // Register all commands here, keeping the main method clean!
         commandRegistry.put("open", new OpenCommand(universe));
         commandRegistry.put("close", new CloseCommand(universe));
         commandRegistry.put("save", new SaveCommand(universe));
@@ -38,7 +37,6 @@ public class CommandInvoker {
         String commandName;
         String[] commandArgs;
 
-        // Cleanly split the text
         if (input.toLowerCase().startsWith("save as")) {
             commandName = "save as";
             commandArgs = input.split("\\s+", 3);

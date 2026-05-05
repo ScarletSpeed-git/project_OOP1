@@ -9,7 +9,6 @@ import java.util.List;
 
 public class UniverseXmlReader {
 
-    // Not static!
     @SuppressWarnings("unchecked")
     public void read(Universe universe, String filePath) throws Exception {
         File file = new File(filePath);
