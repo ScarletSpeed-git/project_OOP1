@@ -2,9 +2,10 @@ package bg.tu_varna.sit.f24621689.commands;
 
 import bg.tu_varna.sit.f24621689.data.Universe;
 import bg.tu_varna.sit.f24621689.exceptions.PlanetException;
+import bg.tu_varna.sit.f24621689.interfaces.Command;
 import bg.tu_varna.sit.f24621689.models.Planet;
 
-public class AddPlanetCommand  implements Command{
+public class AddPlanetCommand  implements Command {
 
 private Universe universe;
 

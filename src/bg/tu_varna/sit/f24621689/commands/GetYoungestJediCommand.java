@@ -3,6 +3,7 @@ package bg.tu_varna.sit.f24621689.commands;
 import bg.tu_varna.sit.f24621689.data.Universe;
 import bg.tu_varna.sit.f24621689.exceptions.PlanetException;
 import bg.tu_varna.sit.f24621689.exceptions.JediException;
+import bg.tu_varna.sit.f24621689.interfaces.Command;
 import bg.tu_varna.sit.f24621689.models.Jedi;
 import bg.tu_varna.sit.f24621689.models.Planet;
 import bg.tu_varna.sit.f24621689.models.Rank;
