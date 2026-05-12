@@ -52,6 +52,14 @@ public class OpenCommand implements Command {
         String filePath = args[1];
         File file = new File(filePath);
 
+        /**
+         * If the file is open check
+         */
+
+        if (filePath.equals(universe.getCurrentFilePath())) {
+            throw new FileException("Error: File '" + file.getName() + "' is already open.");
+        }
+
         try {
             /**
              *  Check if the requested file already exists on the system

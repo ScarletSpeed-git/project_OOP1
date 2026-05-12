@@ -48,7 +48,7 @@ public class HelpCommand implements Command {
         helpText.append("[Jedi & Planet Management]\n");
         helpText.append("  add_planet <name>                                               | Adds a new planet\n");
         helpText.append("  create_jedi <planet> <name> <rank> <age> <color> <strength>     | Creates a new Jedi\n");
-        helpText.append("  remove_jedi <name>                                              | Removes a Jedi\n");
+        helpText.append("  remove_jedi <planet> <name>                                              | Removes a Jedi\n");
         helpText.append("  promote_jedi <name> <multiplier>                                | Promotes a Jedi\n");
         helpText.append("  demote_jedi <name> <multiplier>                                 | Demotes a Jedi\n\n");
 
